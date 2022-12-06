@@ -1,4 +1,4 @@
-package com.flightright.counter.utils;
+package com.flightright.counter.generator;
 
 import net.andreinc.mockneat.MockNeat;
 import net.andreinc.mockneat.types.enums.StringType;
@@ -19,7 +19,7 @@ public class FileGenerator {
 
    private static void generateCsvFile(){
        MockNeat m = MockNeat.threadLocal();
-       final Path path = Paths.get("./src/main/resources/test2.csv");
+       final Path path = Paths.get("./src/main/resources/data/test.csv");
 
        m.fmt("#{email},#{phone},#{source}")
                .param("email", m.emails())
